@@ -1,12 +1,8 @@
 import React from "react";
-import Header from "../components/navbar/Header";
-import { CssBaseline, makeStyles } from "@material-ui/core";
-
-const useStyles = makeStyles((theme) => ({
-  mainGrid: {
-    marginTop: theme.spacing(3),
-  },
-}));
+import NavBar from "../components/NavBar";
+import { CssBaseline } from "@material-ui/core";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
 
 const Home = () => {
   const sections = [
@@ -15,12 +11,12 @@ const Home = () => {
     { title: "Contact", url: "#" },
   ];
 
-  const classes = useStyles();
-
   return (
     <React.Fragment>
       <CssBaseline />
-      <Header title="OralTec" sections={sections} />
+      <NavBar title="OralTec" sections={sections} />
+      <Hero />
+      <Services />
     </React.Fragment>
   );
 };
