@@ -100,8 +100,8 @@ function Services(props: Props) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 275,
     flexGrow: 1,
+    marginBottom: theme.spacing(5),
   },
   title: {
     fontSize: 14,

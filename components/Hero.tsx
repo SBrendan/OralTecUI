@@ -16,8 +16,8 @@ function Hero(props: Props) {
         src={backgroundImage}
         alt="increase priority"
       />
-      <Typography align="center" variant="h1">
-        Oraltec
+      <Typography align="center" variant="h1" className={classes.h1}>
+        ORALTEC
       </Typography>
       <Typography
         color="inherit"
@@ -25,7 +25,7 @@ function Hero(props: Props) {
         variant="h5"
         className={classes.h5}
       >
-        Laboratoire spécialisé dans la prothése dentaire 'Adjointe'
+        Laboratoire spécialisé en prothèse dentaire 'Adjointe'
       </Typography>
     </HeroLayout>
   );
@@ -34,19 +34,30 @@ function Hero(props: Props) {
 const useStyles = makeStyles((theme) => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
-    backgroundColor: "#7fc7d9", // Average color of the background image.
+    backgroundColor: "#E5EBEE", // Average color of the background image.
     backgroundPosition: "center",
   },
   button: {
     minWidth: 200,
   },
+  h1: {
+    letterSpacing: "1.5rem",
+    fontSize: "2rem"
+  },
   h5: {
-    color: "#132540",
+    color: "#293842",
+    fontWeight: "bold",
+    textTransform: "uppercase",
     marginBottom: theme.spacing(4),
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(3.5),
     [theme.breakpoints.up("sm")]: {
       marginTop: theme.spacing(10),
+      fontSize: "2rem",
     },
+    [theme.breakpoints.up("md")]: {
+      marginTop: theme.spacing(5),
+      fontSize: "4rem",
+    }
   },
   more: {
     marginTop: theme.spacing(2),
