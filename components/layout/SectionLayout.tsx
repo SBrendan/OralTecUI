@@ -1,7 +1,4 @@
-import {
-  Divider,
-  makeStyles,
-} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import React from "react";
 import DividerWithText from "./DividerLayout";
 
@@ -13,7 +10,7 @@ interface Props {
 }
 
 function SectionLayout(props: Props) {
-  const { sections, title, backgroundColor, content } = props;
+  const { sections, title, content } = props;
 
   const classes = useStyles(props);
 
@@ -28,7 +25,7 @@ function SectionLayout(props: Props) {
 const useStyles = makeStyles({
   section: (props: Props) => ({
     backgroundColor: props.backgroundColor,
-  })
+  }),
 });
 
 export default SectionLayout;
