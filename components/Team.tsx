@@ -73,7 +73,7 @@ function Team(props: Props) {
             <React.Fragment>
                 {peoples.map((people) => {
                     return (
-                        <Grid item xs={3} key={people.id}>
+                        <Grid item xs={6} md={3} key={people.id}>
                             <Avatar alt={people.name} src={people.profilePicture} className={classes.avatar} />
                             <Typography align="center" variant="subtitle1" className={classes.name}>{people.name}</Typography>
                             <Typography align="center" variant="subtitle2" className={classes.jobsCategory}>{people.jobsCategory}</Typography>
