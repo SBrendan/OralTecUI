@@ -7,6 +7,8 @@ import SectionLayout from "../components/layout/SectionLayout";
 import WhoWeAre from "../components/whoWeAre";
 import Team from "../components/Team";
 import "fontsource-roboto";
+import Hardware from "../components/Hardware";
+import Contact from "../components/Contact";
 
 const Home = () => {
   const sections = [
@@ -23,7 +25,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <NavBar title="OralTec" sections={sections} />
+      <NavBar title="Oraltec" sections={sections} />
       <Hero />
       <SectionLayout
         title="Qui Sommes-nous ?"
@@ -39,6 +41,16 @@ const Home = () => {
         title="Service"
         sections={<Services />}
         content={content}
+        backgroundColor="#ffffff"
+      />
+      <SectionLayout
+        title="équipement"
+        sections={<Hardware />}
+        backgroundColor="#f5f5f5"
+      />
+      <SectionLayout
+        title="contact"
+        sections={<Contact />}
         backgroundColor="#ffffff"
       />
     </React.Fragment>

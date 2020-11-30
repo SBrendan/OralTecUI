@@ -47,7 +47,7 @@ function Header(props: Props) {
                   className={classes.linkText}
                 >
                   <ListItem>
-                    <ListItemText primary={section.title} />
+                    <ListItemText primary={section.title} classes={{ primary: classes.title }} />
                   </ListItem>
                 </Link>
               ))}
@@ -78,6 +78,15 @@ const useStyles = makeStyles((theme) => ({
       color: "#db8024",
       textDecoration: "none",
       borderBottom: "6px solid #db8024",
+    },
+  },
+  title: {
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1rem"
+    },
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      fontSize: "0.5rem"
     }
   },
   navDisplayFlex: {
