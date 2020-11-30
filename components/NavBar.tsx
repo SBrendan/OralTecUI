@@ -23,7 +23,7 @@ function Header(props: Props) {
   return (
     <React.Fragment>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className={classes.customToolBar}>
           <Container className={classes.navbarDisplayFlex}>
             <Typography
               component="h2"
@@ -38,11 +38,10 @@ function Header(props: Props) {
               component="nav"
               aria-labelledby="main navigation"
               className={classes.navDisplayFlex}
+              disablePadding={true}
             >
               {sections.map((section) => (
                 <Link
-                  color="inherit"
-                  noWrap
                   key={section.title}
                   href={section.url}
                   className={classes.linkText}
@@ -65,11 +64,21 @@ const useStyles = makeStyles((theme) => ({
     display: `flex`,
     justifyContent: `space-between`,
     alignItems: `center`,
+    paddingBottom: "none",
+  },
+  customToolBar: {
+    minHeight: "0",
   },
   linkText: {
     textDecoration: `none`,
     textTransform: `uppercase`,
-    color: `white`,
+    color: `#293842`,
+    borderBottom: "6px solid #f4f4f4",
+    "&:hover": {
+      color: "#db8024",
+      textDecoration: "none",
+      borderBottom: "6px solid #db8024",
+    }
   },
   navDisplayFlex: {
     display: `flex`,
