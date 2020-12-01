@@ -7,7 +7,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-function HeroLayout(props: Props) {
+const HeroLayout: React.FC<Props> = (props: Props) => {
   const classes = useStyles();
   const { backgroundClassName, children } = props;
 
@@ -35,7 +35,7 @@ function HeroLayout(props: Props) {
       </section>
     </React.Fragment>
   );
-}
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {

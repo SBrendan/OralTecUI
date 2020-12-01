@@ -1,24 +1,45 @@
 import {
   AppBar,
+  Button,
   Container,
+  Drawer,
+  IconButton,
   Link,
   List,
   ListItem,
   ListItemText,
   makeStyles,
+  Menu,
+  MenuItem,
   Toolbar,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+
 import React from "react";
 
 interface Props {
-  sections: any[];
   title: string;
 }
 
-function Header(props: Props) {
+const Header: React.FC<Props> = (props: Props) => {
   const classes = useStyles();
-  const { sections, title } = props;
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
+
+  const handleMenu = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const menuItems = [
+    { menuTitle: "Qui Sommes-nous ?", pageURL: "#" },
+    { menuTitle: "Produits/Services", pageURL: "#" },
+    { menuTitle: "Nous Contacter", pageURL: "#" },
+  ];
 
   return (
     <React.Fragment>
@@ -32,26 +53,61 @@ function Header(props: Props) {
               color='textPrimary'
               align='center'
             >
-              {title}
+              {props.title}
             </Typography>
-            <List
-              component="nav"
-              aria-labelledby="main navigation"
-              className={classes.navDisplayFlex}
-              disablePadding={true}
-            >
-              {sections.map((section) => (
-                <Link
-                  key={section.title}
-                  href={section.url}
-                  className={classes.linkText}
+            {isMobile ? (
+              <>
+                <IconButton
+                  edge="start"
+                  className={classes.menuButton}
+                  color="inherit"
+                  aria-label="menu"
+                  onClick={handleMenu}
                 >
-                  <ListItem>
-                    <ListItemText primary={section.title} classes={{ primary: classes.title }} />
-                  </ListItem>
-                </Link>
-              ))}
-            </List>
+                  <MenuIcon />
+                </IconButton>
+                <Drawer
+                  id="menu-appbar"
+                  anchor="right"
+                  keepMounted
+                  open={open}
+                  onClose={() => setAnchorEl(null)}
+                >
+                  <Typography variant="h2" color="primary">Oraltec</Typography>
+                  <List
+                    aria-labelledby="main navigation"
+                    disablePadding={true}
+                  >
+                    {menuItems.map((section) => (
+                        <ListItem button>
+                          <ListItemText primary={section.menuTitle} />
+                        </ListItem>
+                    ))}
+                  </List>
+                </Drawer>
+              </>
+            ) : (
+                <div className={classes.headerOptions}>
+                  <List
+                    component="nav"
+                    aria-labelledby="main navigation"
+                    className={classes.navbarDisplayFlex}
+                    disablePadding={true}
+                  >
+                    {menuItems.map((section) => (
+                      <Link
+                        key={section.menuTitle}
+                        href={section.pageURL}
+                        className={classes.linkText}
+                      >
+                        <ListItem>
+                          <ListItemText primary={section.menuTitle} classes={{ primary: classes.title }} />
+                        </ListItem>
+                      </Link>
+                    ))}
+                  </List>
+                </div>
+              )}
           </Container>
         </Toolbar>
       </AppBar>
@@ -60,14 +116,24 @@ function Header(props: Props) {
 }
 
 const useStyles = makeStyles((theme) => ({
-  navbarDisplayFlex: {
-    display: `flex`,
-    justifyContent: `space-between`,
-    alignItems: `center`,
-    paddingBottom: "none",
+  title: {
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1rem"
+    },
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      fontSize: "0.6rem"
+    }
   },
   customToolBar: {
     minHeight: "0",
+  },
+  menuButton: {
+    marginRight: theme.spacing(2)
+  },
+  headerOptions: {
+    display: "flex",
+    justifyContent: "space-between"
   },
   linkText: {
     textDecoration: `none`,
@@ -80,18 +146,11 @@ const useStyles = makeStyles((theme) => ({
       borderBottom: "6px solid #db8024",
     },
   },
-  title: {
-    [theme.breakpoints.up("md")]: {
-      fontSize: "1rem"
-    },
-    [theme.breakpoints.down("sm")]: {
-      textAlign: "center",
-      fontSize: "0.5rem"
-    }
-  },
-  navDisplayFlex: {
+  navbarDisplayFlex: {
     display: `flex`,
     justifyContent: `space-between`,
+    alignItems: `center`,
+    paddingBottom: "none",
   },
 }));
 

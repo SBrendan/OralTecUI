@@ -11,12 +11,6 @@ import Hardware from "../components/Hardware";
 import Contact from "../components/Contact";
 
 const Home = () => {
-  const sections = [
-    { title: "Qui Sommes-nous ?", url: "#" },
-    { title: "Produits/Services", url: "#" },
-    { title: "Nous Contacter", url: "#" },
-  ];
-
   const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
   laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -25,7 +19,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <NavBar title="Oraltec" sections={sections} />
+      <NavBar title="Oraltec" />
       <Hero />
       <SectionLayout
         title="Qui Sommes-nous ?"

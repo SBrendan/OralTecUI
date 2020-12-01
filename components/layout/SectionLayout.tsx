@@ -9,18 +9,18 @@ interface Props {
   backgroundColor: string;
 }
 
-function SectionLayout(props: Props) {
+const SectionLayout: React.FC<Props> = (props: Props) => {
   const { sections, title, content } = props;
 
   const classes = useStyles(props);
 
   return (
     <section className={classes.section}>
-      <DividerWithText title={title} content={content} />
+      <DividerWithText title={title} content={content || ""} />
       {sections}
     </section>
   );
-}
+};
 
 const useStyles = makeStyles({
   section: (props: Props) => ({
