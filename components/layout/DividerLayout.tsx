@@ -6,7 +6,7 @@ interface Props {
   content: string;
 }
 
-function DividerWithText(props: Props) {
+const DividerWithText: React.FC<Props> = (props: Props) => {
   const classes = useStyles();
   const { title, content } = props;
   return (
@@ -26,7 +26,7 @@ function DividerWithText(props: Props) {
       ) : null}
     </Container>
   );
-}
+};
 
 const useStyles = makeStyles((theme) => ({
   container: {

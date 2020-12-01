@@ -1,9 +1,7 @@
 import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
-interface Props { }
-
-function Hardware(props: Props) {
+function Hardware() {
     const classes = useStyles();
     return (
         <Container className={classes.container}>

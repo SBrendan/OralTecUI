@@ -10,8 +10,6 @@ import {
 } from "@material-ui/core";
 import React from "react";
 
-interface Props {}
-
 const services = [
   {
     title: "Barre implanto-portée",
@@ -55,7 +53,7 @@ const services = [
   },
 ];
 
-function Services(props: Props) {
+const Services: React.FC = () => {
   const classes = useStyles();
 
   function GenerateCard() {

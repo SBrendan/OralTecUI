@@ -12,8 +12,6 @@ import {
 } from "@material-ui/core";
 import React from "react";
 
-interface Props { }
-
 const peoples = [
     {
         name: "Foo Bar",
@@ -65,7 +63,7 @@ const peoples = [
     },
 ];
 
-function Team(props: Props) {
+const Team: React.FC = () =>{
     const classes = useStyles();
 
     function GenerateCard() {

@@ -1,13 +1,11 @@
 import { faAt, faClock, faMap, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dynamic from 'next/dynamic';
-import { Container, Grid, List, ListItem, ListItemIcon, ListItemText, makeStyles, Typography } from "@material-ui/core";
+import { Container, Grid, List, ListItem, ListItemIcon, ListItemText, makeStyles } from "@material-ui/core";
 import React from "react";
 import Map from "./layout/MapLayout";
 
-interface Props { }
-
-function Contact(props: Props) {
+const Contact: React.FC = () => {
     const classes = useStyles();
 
     return (
@@ -24,7 +22,7 @@ function Contact(props: Props) {
                         </ListItem>
                         <ListItem divider className={classes.content}>
                             <ListItemIcon><FontAwesomeIcon icon={faMap} /></ListItemIcon>
-                            <ListItemText classes={{ primary: classes.primary, secondary: classes.secondary }} primary="Adresse" secondary={"1 Rue d'Anjou \n 35140 SAINT-AUBIN-DU-CORMIER"} />
+                            <ListItemText classes={{ primary: classes.primary, secondary: classes.secondary }} primary="Adresse" secondary={"1 Rue d'Anjou 35140 SAINT-AUBIN-DU-CORMIER"} />
                         </ListItem>
                         <ListItem divider className={classes.content}>
                             <ListItemIcon><FontAwesomeIcon icon={faPhone} /></ListItemIcon>
