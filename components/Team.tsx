@@ -11,6 +11,7 @@ import {
     Typography,
 } from "@material-ui/core";
 import React from "react";
+import TitleWithLine from "./layout/TitleWithLine";
 
 const peoples = [
     {
@@ -85,7 +86,8 @@ const Team: React.FC = () =>{
     return (
         <React.Fragment>
             <Container className={classes.root}>
-                <Grid container spacing={4} direction="row" >
+                <TitleWithLine titleWithLine='"notre équipe"' />
+                <Grid container spacing={4} direction="row" className={classes.grid}>
                     <GenerateCard />
                 </Grid>
             </Container>
@@ -95,9 +97,13 @@ const Team: React.FC = () =>{
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginBottom: theme.spacing(5),
+        marginBottom: theme.spacing(2),
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
+    },
+    grid: {
+        marginTop: theme.spacing(2),
     },
     name: {
         fontSize: 14,

@@ -2,26 +2,45 @@ import { Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
 interface Props {
-  title: string;
+  title?: string;
+  content: string;
+  mainTitle?: boolean;
 }
 
 const DividerWithText: React.FC<Props> = (props: Props) => {
-  const classes = useStyles();
-  const { title } = props;
+  const classes = useStyles(props);
+  const { title, content, mainTitle } = props;
+
+  if (mainTitle) {
+    return (
+      <Container className={classes.container}>
+        <Typography align="center" variant="h2" className={classes.contentTitle}>
+          {title}
+        </Typography>
+        <div className={classes.border} />
+        {content ? (
+          <Typography
+            align="center"
+            variant="subtitle1"
+            className={classes.content}
+          >
+            {content}
+          </Typography>
+        ) : null}
+      </Container>
+    );
+  }
 
   return (
     <Container className={classes.container}>
-      <Typography align="center" variant="h2" className={classes.contentTitle}>
-        {title}
-      </Typography>
-      <div className={classes.border} />
+          {content}
     </Container>
   );
 };
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(5),
+    paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(5),
     display: "flex",
     alignItems: "center",

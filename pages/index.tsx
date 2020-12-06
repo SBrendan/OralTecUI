@@ -9,6 +9,7 @@ import Team from "../components/Team";
 import "fontsource-roboto";
 import Hardware from "../components/Hardware";
 import Contact from "../components/Contact";
+import IconCards from "../components/layout/IconCards";
 
 const Home: React.FC = () => {
   return (
@@ -16,11 +17,21 @@ const Home: React.FC = () => {
       <CssBaseline />
       <NavBar title="Oraltec" />
       <Hero />
+      <div style={{
+        backgroundColor:"transparent", 
+        marginTop : "-90px",
+        width:"100%",
+        justifyContent: "center",
+        display:"flex",
+      }}>
+        <IconCards />
+      </div>
       <SectionLayout
         title="Qui Sommes-nous ?"
         sections={<WhoWeAre />}
         backgroundColor="#ffffff"
         id="who"
+        mainTitle
       />
       <SectionLayout
         title="L'équipe"
@@ -29,10 +40,11 @@ const Home: React.FC = () => {
         id="team"
       />
       <SectionLayout
-        title="Service"
+        title="Produits / Services"
         sections={<Services />}
         backgroundColor="#ffffff"
         id="service"
+        mainTitle
       />
       <SectionLayout
         title="équipement"
@@ -45,9 +57,11 @@ const Home: React.FC = () => {
         sections={<Contact />}
         backgroundColor="#ffffff"
         id="contact"
+        mainTitle
       />
     </React.Fragment>
   );
 };
 
 export default Home;
+

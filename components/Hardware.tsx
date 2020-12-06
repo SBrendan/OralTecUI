@@ -1,5 +1,6 @@
 import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import TitleWithLine from "./layout/TitleWithLine";
 
 function Hardware() {
     const classes = useStyles();
@@ -7,6 +8,7 @@ function Hardware() {
         <Container className={classes.container}>
             <Grid container direction="row" spacing={10}>
                 <Grid item md={6} xs={12}>
+                    <TitleWithLine title="matériel" titleWithLine='"informatique"' />
                     <Typography variant="subtitle1" className={classes.content}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis risus vulputate, pulvinar odio vel, feugiat nulla.
                         Vestibulum sollicitudin sapien et malesuada eleifend.
