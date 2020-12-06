@@ -3,27 +3,18 @@ import React from "react";
 
 interface Props {
   title: string;
-  content: string;
 }
 
 const DividerWithText: React.FC<Props> = (props: Props) => {
   const classes = useStyles();
-  const { title, content } = props;
+  const { title } = props;
+
   return (
     <Container className={classes.container}>
       <Typography align="center" variant="h2" className={classes.contentTitle}>
         {title}
       </Typography>
       <div className={classes.border} />
-      {content ? (
-        <Typography
-          align="center"
-          variant="subtitle1"
-          className={classes.content}
-        >
-          {content}
-        </Typography>
-      ) : null}
     </Container>
   );
 };
@@ -40,7 +31,12 @@ const useStyles = makeStyles((theme) => ({
   contentTitle: {
     fontWeight: "bold",
     letterSpacing: "0.4rem",
-    fontSize: "2rem",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "2rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1rem",
+    },
     textTransform: "uppercase",
     color: theme.palette.secondary.main,
     textAlign: "center",
@@ -55,6 +51,11 @@ const useStyles = makeStyles((theme) => ({
   border: {
     paddingTop: theme.spacing(3),
     borderBottom: "5px solid #db8024",
+    width: "15rem",
+  },
+  border2: {
+    paddingTop: theme.spacing(3),
+    borderBottom: "5px solid red",
     width: "15rem",
   },
 }));

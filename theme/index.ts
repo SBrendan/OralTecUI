@@ -13,11 +13,10 @@ const theme = createMuiTheme({
       primary: "#74787b",
     },
     background: {
-      default: "#F4F5F4",
+      default: "#fff",
     },
     action: {
       active: "#DB8024",
-      hover: "#DB8024",
     }
     
   },
@@ -34,6 +33,13 @@ const theme = createMuiTheme({
       fontFamily: "Montserrat",
     },
   },
+  overrides: {
+    MuiBackdrop: {
+      root: {
+        backgroundColor: 'rgba(0,0,0,0.2)'
+      }
+    }
+  }
 });
 
 export { theme };

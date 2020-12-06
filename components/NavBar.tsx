@@ -35,15 +35,21 @@ const Header: React.FC<Props> = (props: Props) => {
     setAnchorEl(event.currentTarget);
   };
 
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
+
   const menuItems = [
-    { menuTitle: "Qui Sommes-nous ?", pageURL: "#" },
-    { menuTitle: "Produits/Services", pageURL: "#" },
-    { menuTitle: "Nous Contacter", pageURL: "#" },
+    { menuTitle: "Qui Sommes-nous ?", pageURL: "#who" },
+    { menuTitle: "L'équipe", pageURL: "#team" },
+    { menuTitle: "Services", pageURL: "#service" },
+    { menuTitle: "Equipement", pageURL: "#equipement" },
+    { menuTitle: "Nous Contacter", pageURL: "#contact" },
   ];
 
   return (
     <React.Fragment>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar className={classes.customToolBar}>
           <Container className={classes.navbarDisplayFlex}>
             <Typography
@@ -71,7 +77,7 @@ const Header: React.FC<Props> = (props: Props) => {
                   anchor="right"
                   keepMounted
                   open={open}
-                  onClose={() => setAnchorEl(null)}
+                  onClose={handleClose}
                 >
                   <Typography variant="h2" color="primary">Oraltec</Typography>
                   <List
@@ -79,9 +85,16 @@ const Header: React.FC<Props> = (props: Props) => {
                     disablePadding={true}
                   >
                     {menuItems.map((section) => (
-                        <ListItem button>
+                      <Link
+                        key={section.menuTitle}
+                        href={section.pageURL}
+                        className={classes.linkText}
+                        onClick={handleClose}
+                      >
+                        <ListItem button key={section.menuTitle}>
                           <ListItemText primary={section.menuTitle} />
                         </ListItem>
+                      </Link>
                     ))}
                   </List>
                 </Drawer>

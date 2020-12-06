@@ -13,7 +13,7 @@ interface States {
 }
 
 const Map: React.FC = () => {
-  const [viewport, onViewportChange] = React.useState<States | {}>({
+  const [viewport, onViewportChange] = React.useState<States>({
     width: "fit",
     height: "40vh",
     latitude: 48.2538059,
