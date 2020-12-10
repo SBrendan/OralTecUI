@@ -8,7 +8,7 @@ interface Props {
 
 
 const TitleWithLine: React.FC<Props> = (props: Props) => {
-    const { title, titleWithLine } = props;
+    const { title } = props;
   
     const classes = useStyles(props);
   
@@ -29,7 +29,7 @@ const TitleWithLine: React.FC<Props> = (props: Props) => {
   };
 
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(({
     title: {
         fontWeight: "bold",
         letterSpacing: "0.1rem",

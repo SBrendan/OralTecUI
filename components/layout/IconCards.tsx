@@ -39,11 +39,11 @@ function IconCards(props: Props) {
       <React.Fragment>
         {iconInfos.map((iconInfo) => {
           return (
-              <Grid className={classes.gridItem} item xs={3} key={iconInfo.id} justify="center">
+              <Grid className={classes.gridItem} item xs={3} key={iconInfo.id} >
                 <Card className={classes.iconCard}>
                     <CardContent className={classes.cardContent}>
                       <img src={iconInfo.icon} className={classes.icon} />
-                        <Typography gutterBottom className={classes.iconCardName}>
+                        <Typography variant='subtitle1' gutterBottom className={classes.iconCardName}>
                           {iconInfo.title}
                         </Typography >
                         <Typography variant="subtitle1" className={classes.description}>
@@ -89,11 +89,11 @@ const useStyles = makeStyles((theme) => ({
     padding:"0px 30px", 
   },
   iconCardName: {
-    fontSize: "1.2em",
+    fontSize: 16,
     fontWeight: "bold",
+    marginTop: "0.5em",
     textTransform: "uppercase",
-    color: theme.palette.secondary.main,
-    textAlign: "center"
+    color: theme.palette.secondary.main
   },
   description: {
     fontFamily: "Roboto, sans-serif",

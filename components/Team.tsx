@@ -1,10 +1,5 @@
 import {
     Avatar,
-    Box,
-    Button,
-    Card,
-    CardActions,
-    CardContent,
     Container,
     Grid,
     makeStyles,
@@ -87,7 +82,7 @@ const Team: React.FC = () =>{
         <React.Fragment>
             <Container className={classes.root}>
                 <TitleWithLine titleWithLine='"notre équipe"' />
-                <Grid container spacing={4} direction="row" className={classes.grid}>
+                <Grid container spacing={4} className={classes.grid}>
                     <GenerateCard />
                 </Grid>
             </Container>
@@ -106,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(2),
     },
     name: {
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: "bold",
         marginTop: "0.5em",
         textTransform: "uppercase",
