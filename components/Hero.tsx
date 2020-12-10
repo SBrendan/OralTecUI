@@ -25,7 +25,7 @@ function Hero() {
         variant="h5"
         className={classes.h5}
       >
-        Laboratoire dentaire spécialisé en prothèse <span className={classes.adj}>Adjointe</span>
+        Laboratoire dentaire spécialisé <br/>en prothèse <span className={classes.adj}>Adjointe</span>
       </Typography>
     </HeroLayout>
   );

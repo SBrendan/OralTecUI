@@ -10,10 +10,10 @@ import {
   Typography,
 } from "@material-ui/core";
 import Modal from "react-modal";
-import React, { useEffect, useState } from "react";
 import ModalLayout from "./layout/ModalLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 Modal.setAppElement('#service');
 const services = [
@@ -172,10 +172,10 @@ const Services: React.FC = () => {
   function GenerateCard() {
     return (
       <React.Fragment>
-        {content}
+        <Typography variant="subtitle1" className={classes.content}>{content}</Typography>
         {services.map((service) => {
           return (
-            <Grid item xs={3} key={service.id}>
+            <Grid item xs={9} sm={5} md={3} key={service.id}>
               <Card className={classes.serviceCard}>
                 <div className={classes.cardGlobalContent}>
                   <CardMedia
@@ -185,7 +185,7 @@ const Services: React.FC = () => {
                   />
                   <CardContent className={classes.cardContent}>
                     <img src={service.icon} className={classes.icon} />
-                    <Typography gutterBottom className={classes.serviceName}>
+                    <Typography gutterBottom variant='subtitle1' className={classes.serviceName}>
                       {service.title}
                     </Typography>
                   </CardContent>
@@ -196,7 +196,7 @@ const Services: React.FC = () => {
                   </Button>
                 </CardActions>
               </Card>
-            </Grid>
+             </Grid>
           );
         })}
         <Modal
@@ -216,7 +216,7 @@ const Services: React.FC = () => {
   return (
     <React.Fragment>
       <Container>
-        <Grid container spacing={4}>
+        <Grid className="grid" container spacing={4} justify="center">
           <GenerateCard />
         </Grid>
       </Container>
@@ -247,11 +247,11 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px 20px"
   },
   serviceName: {
-    fontSize: "1.2em",
+    fontSize: 16,
     fontWeight: "bold",
+    marginTop: "0.5em",
     textTransform: "uppercase",
-    color: theme.palette.secondary.main,
-    textAlign: "center"
+    color: theme.palette.secondary.main
   },
   cardActions: {
     background: theme.palette.primary.main,
@@ -265,6 +265,17 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "underline",
     textTransform: "lowercase",
     fontSize: "1.2em",
+  },
+  content: {
+    fontFamily: "Roboto, sans-serif",
+    color: theme.palette.secondary.main,
+    padding: "20px",
+    [theme.breakpoints.up("sm")]: {
+    textAlign: "center",
+    },
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "left",
+    },
   },
   modal: {
     position: "absolute",
