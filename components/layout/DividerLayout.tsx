@@ -3,7 +3,7 @@ import React from "react";
 
 interface Props {
   title?: string;
-  content: string;
+  content?: string;
   mainTitle?: boolean;
 }
 
@@ -14,7 +14,11 @@ const DividerWithText: React.FC<Props> = (props: Props) => {
   if (mainTitle) {
     return (
       <Container className={classes.container}>
-        <Typography align="center" variant="h2" className={classes.contentTitle}>
+        <Typography
+          align="center"
+          variant="h2"
+          className={classes.contentTitle}
+        >
           {title}
         </Typography>
         <div className={classes.border} />
@@ -31,11 +35,7 @@ const DividerWithText: React.FC<Props> = (props: Props) => {
     );
   }
 
-  return (
-    <Container className={classes.container}>
-          {content}
-    </Container>
-  );
+  return <Container className={classes.container}>{content || ""}</Container>;
 };
 
 const useStyles = makeStyles((theme) => ({

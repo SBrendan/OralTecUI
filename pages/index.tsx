@@ -17,13 +17,15 @@ const Home: React.FC = () => {
       <CssBaseline />
       <NavBar title="Oraltec" />
       <Hero />
-      <div style={{
-        backgroundColor:"transparent", 
-        marginTop : "-90px",
-        width:"100%",
-        justifyContent: "center",
-        display:"flex",
-      }}>
+      <div
+        style={{
+          backgroundColor: "transparent",
+          marginTop: "-90px",
+          width: "100%",
+          justifyContent: "center",
+          display: "flex",
+        }}
+      >
         <IconCards />
       </div>
       <SectionLayout
@@ -64,4 +66,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-

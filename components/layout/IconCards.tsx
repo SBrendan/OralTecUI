@@ -8,30 +8,29 @@ import {
 } from "@material-ui/core";
 import React from "react";
 
-interface Props {}
-
 const iconInfos = [
   {
     title: "Nous trouver",
     id: "1",
     icon: "/static/img/pincircle.png",
-    description: "1 Rue d'Anjou 35140 SAINT-AUBIN-DU-CORMIER"
+    description: "1 Rue d'Anjou 35140 SAINT-AUBIN-DU-CORMIER",
   },
   {
     title: "Nous contacter",
     id: "2",
     icon: "/static/img/contactcircle.png",
-    description: "02 99 39 11 11 oraltec@orange.fr"
+    description: "02 99 39 11 11 oraltec@orange.fr",
   },
   {
     title: "Notre expertise",
     id: "3",
     icon: "/static/img/starcircle.png",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor"
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
   },
 ];
 
-function IconCards(props: Props) {
+const IconCards: React.FC = () => {
   const classes = useStyles();
 
   function GenerateCard() {
@@ -39,19 +38,26 @@ function IconCards(props: Props) {
       <React.Fragment>
         {iconInfos.map((iconInfo) => {
           return (
-              <Grid className={classes.gridItem} item xs={3} key={iconInfo.id} >
-                <Card className={classes.iconCard}>
-                    <CardContent className={classes.cardContent}>
-                      <img src={iconInfo.icon} className={classes.icon} />
-                        <Typography variant='subtitle1' gutterBottom className={classes.iconCardName}>
-                          {iconInfo.title}
-                        </Typography >
-                        <Typography variant="subtitle1" className={classes.description}>
-                          {iconInfo.description}
-                        </Typography>
-                    </CardContent>
-                </Card>
-             </Grid>
+            <Grid className={classes.gridItem} item xs={3} key={iconInfo.id}>
+              <Card className={classes.iconCard}>
+                <CardContent className={classes.cardContent}>
+                  <img src={iconInfo.icon} className={classes.icon} />
+                  <Typography
+                    variant="subtitle1"
+                    gutterBottom
+                    className={classes.iconCardName}
+                  >
+                    {iconInfo.title}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    className={classes.description}
+                  >
+                    {iconInfo.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
           );
         })}
       </React.Fragment>
@@ -86,19 +92,19 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     height: "100%",
-    padding:"0px 30px", 
+    padding: "0px 30px",
   },
   iconCardName: {
     fontSize: 16,
     fontWeight: "bold",
     marginTop: "0.5em",
     textTransform: "uppercase",
-    color: theme.palette.secondary.main
+    color: theme.palette.secondary.main,
   },
   description: {
     fontFamily: "Roboto, sans-serif",
     color: theme.palette.secondary.main,
-  }
+  },
 }));
 
 export default IconCards;

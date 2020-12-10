@@ -1,6 +1,5 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
-import { theme } from "../../theme";
 import DividerWithText from "./DividerLayout";
 
 interface Props {
@@ -19,7 +18,11 @@ const SectionLayout: React.FC<Props> = (props: Props) => {
 
   return (
     <section className={classes.section} id={id}>
-      <DividerWithText title={title || ""} content={content || ""} mainTitle={mainTitle} />
+      <DividerWithText
+        title={title || ""}
+        content={content || ""}
+        mainTitle={mainTitle}
+      />
       {sections}
     </section>
   );
