@@ -61,7 +61,7 @@ const ModalLayout: React.FC<Props> = (props: Props) => {
   return (
     <React.Fragment>
       <Container>
-        <DividerWithText title={serviceDetails.title} />
+        <DividerWithText title={serviceDetails.title} mainTitle />
         <Grid container direction="row" spacing={2}>
           <Grid item md={6} xs={12}>
             <Carousel

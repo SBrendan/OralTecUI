@@ -51,7 +51,7 @@ const iconInfos = [
     title: "Nous contacter",
     id: "2",
     icon: "/static/img/contactcircle.png",
-    description: "02 99 39 11 11 oraltec@orange.fr",
+    description: "02 99 39 72 52 oraltec@orange.fr",
   },
   {
     title: "Notre expertise",

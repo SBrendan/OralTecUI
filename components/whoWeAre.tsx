@@ -24,7 +24,7 @@ const WhoWeAre: React.FC = () => {
             <Grid container direction="row" spacing={10}>
                 <Grid item md={6} xs={12}>
                     <Box>
-                        <img alt="Image d'ilustration de prothèse" className={classes.img} src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"/>
+                        <img alt="Image d'ilustration de prothèse" className={classes.img} src="https://images.unsplash.com/photo-1584650589355-e891970a9081?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
                     </Box>
                 </Grid>
                 <Grid item md={6} xs={12}>

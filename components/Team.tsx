@@ -10,52 +10,52 @@ import TitleWithLine from "./layout/TitleWithLine";
 
 const peoples = [
     {
-        name: "Foo Bar",
+        name: "Laurent Théron",
         id: "1",
-        profilePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-        jobsCategory: "John Doe"
+        profilePicture: "https://images.unsplash.com/photo-1559548331-f9cb98001426?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        jobsCategory: "Chef d'entreprise"
     },
     {
-        name: "Foo Bar",
+        name: "Medhi Belhadj",
         id: "2",
-        profilePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-        jobsCategory: "John Doe"
+        profilePicture: "https://images.unsplash.com/photo-1559548331-f9cb98001426?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        jobsCategory: "Châssis Métaliques"
     },
     {
-        name: "Foo Bar",
+        name: "Noémie Remy",
         id: "3",
         profilePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-        jobsCategory: "John Doe"
+        jobsCategory: "Apprentie BTMS"
     },
     {
-        name: "Foo Bar",
+        name: "Lionel Fercoq",
         id: "4",
-        profilePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-        jobsCategory: "John Doe"
+        profilePicture: "https://images.unsplash.com/photo-1559548331-f9cb98001426?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        jobsCategory: "Prothèses Provisoires/Réparation"
     },
     {
-        name: "Foo Bar",
+        name: "Bélinda Bernard",
         id: "5",
         profilePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-        jobsCategory: "John Doe"
+        jobsCategory: "Montages/Gouttières/Polissage"
     },
     {
-        name: "Foo Bar",
+        name: "Carole Viel",
         id: "6",
         profilePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-        jobsCategory: "John Doe"
+        jobsCategory: "Finitions de Cire/Polissage"
     },
     {
-        name: "Foo Bar",
+        name: "Clotilde Boudet-Costantini",
         id: "7",
         profilePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-        jobsCategory: "John Doe"
+        jobsCategory: "PEI/Cire d'occlusion/Finitions de Cire"
     },
     {
-        name: "Foo Bar",
+        name: "Isabelle ",
         id: "8",
         profilePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-        jobsCategory: "John Doe"
+        jobsCategory: "Plâtrière"
     },
 ];
 
