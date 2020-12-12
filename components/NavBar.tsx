@@ -1,6 +1,5 @@
 import {
   AppBar,
-  Button,
   Container,
   Drawer,
   IconButton,
@@ -9,16 +8,53 @@ import {
   ListItem,
   ListItemText,
   makeStyles,
-  Menu,
-  MenuItem,
   Toolbar,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-
 import React from "react";
+
+const useStyles = makeStyles((theme) => ({
+  title: {
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1rem"
+    },
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      fontSize: "0.6rem"
+    }
+  },
+  customToolBar: {
+    minHeight: "0",
+  },
+  menuButton: {
+    marginRight: theme.spacing(2)
+  },
+  headerOptions: {
+    display: "flex",
+    justifyContent: "space-between"
+  },
+  linkText: {
+    textDecoration: `none`,
+    textTransform: `uppercase`,
+    color: `#293842`,
+    borderBottom: "6px solid #f4f4f4",
+    "&:hover": {
+      color: "#db8024",
+      textDecoration: "none",
+      borderBottom: "6px solid #db8024",
+    },
+  },
+  navbarDisplayFlex: {
+    display: `flex`,
+    justifyContent: `space-between`,
+    alignItems: `center`,
+    paddingBottom: "none",
+  },
+}));
+
 
 interface Props {
   title: string;
@@ -127,44 +163,5 @@ const Header: React.FC<Props> = (props: Props) => {
     </React.Fragment>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  title: {
-    [theme.breakpoints.up("md")]: {
-      fontSize: "1rem"
-    },
-    [theme.breakpoints.down("sm")]: {
-      textAlign: "center",
-      fontSize: "0.6rem"
-    }
-  },
-  customToolBar: {
-    minHeight: "0",
-  },
-  menuButton: {
-    marginRight: theme.spacing(2)
-  },
-  headerOptions: {
-    display: "flex",
-    justifyContent: "space-between"
-  },
-  linkText: {
-    textDecoration: `none`,
-    textTransform: `uppercase`,
-    color: `#293842`,
-    borderBottom: "6px solid #f4f4f4",
-    "&:hover": {
-      color: "#db8024",
-      textDecoration: "none",
-      borderBottom: "6px solid #db8024",
-    },
-  },
-  navbarDisplayFlex: {
-    display: `flex`,
-    justifyContent: `space-between`,
-    alignItems: `center`,
-    paddingBottom: "none",
-  },
-}));
 
 export default Header;

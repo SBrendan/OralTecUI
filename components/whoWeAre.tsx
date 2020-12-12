@@ -1,6 +1,22 @@
 import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
+const useStyles = makeStyles(theme => ({
+    container: {
+        flexGrow: 1,
+        display: "block",
+        marginBottom: theme.spacing(5),
+    },
+    img: {
+        objectFit: "contain",
+        width: "100%",
+    },
+    content: {
+        fontFamily: "Roboto, sans-serif",
+        color: theme.palette.secondary.main,
+    }
+}));
+
 const WhoWeAre: React.FC = () => {
     const classes = useStyles();
     return (
@@ -27,21 +43,5 @@ const WhoWeAre: React.FC = () => {
         </Container>
     );
 };
-
-const useStyles = makeStyles(theme => ({
-    container: {
-        flexGrow: 1,
-        display: "block",
-        marginBottom: theme.spacing(5),
-    },
-    img: {
-        objectFit: "contain",
-        width: "100%",
-    },
-    content: {
-        fontFamily: "Roboto, sans-serif",
-        color: theme.palette.secondary.main,
-    }
-}));
 
 export default WhoWeAre

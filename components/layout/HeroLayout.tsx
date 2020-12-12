@@ -2,34 +2,6 @@ import React from "react";
 import { Container, makeStyles } from "@material-ui/core";
 import clsx from "clsx";
 
-interface Props {
-  backgroundClassName: string;
-  children: React.ReactNode;
-}
-
-const HeroLayout: React.FC<Props> = (props: Props) => {
-  const classes = useStyles();
-  const { backgroundClassName, children } = props;
-
-  return (
-    <React.Fragment>
-      <section className={classes.root}>
-        <Container className={classes.container}>
-          <img
-            src="/static/img/Wonder.png"
-            alt="wonder"
-            width="147"
-            height="80"
-          />
-          {children}
-          <div className={classes.backdrop} />
-          <div className={clsx(classes.background, backgroundClassName)} />
-        </Container>
-      </section>
-    </React.Fragment>
-  );
-};
-
 const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.common.white,
@@ -70,5 +42,33 @@ const useStyles = makeStyles((theme) => ({
     zIndex: -2,
   },
 }));
+
+interface Props {
+  backgroundClassName: string;
+  children: React.ReactNode;
+}
+
+const HeroLayout: React.FC<Props> = (props: Props) => {
+  const classes = useStyles();
+  const { backgroundClassName, children } = props;
+
+  return (
+    <React.Fragment>
+      <section className={classes.root}>
+        <Container className={classes.container}>
+          <img
+            src="/static/img/Wonder.png"
+            alt="wonder"
+            width="147"
+            height="80"
+          />
+          {children}
+          <div className={classes.backdrop} />
+          <div className={clsx(classes.background, backgroundClassName)} />
+        </Container>
+      </section>
+    </React.Fragment>
+  );
+};
 
 export default HeroLayout;

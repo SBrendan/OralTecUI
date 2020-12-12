@@ -1,43 +1,6 @@
 import { Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
-interface Props {
-  title?: string;
-  content?: string;
-  mainTitle?: boolean;
-}
-
-const DividerWithText: React.FC<Props> = (props: Props) => {
-  const classes = useStyles(props);
-  const { title, content, mainTitle } = props;
-
-  if (mainTitle) {
-    return (
-      <Container className={classes.container}>
-        <Typography
-          align="center"
-          variant="h2"
-          className={classes.contentTitle}
-        >
-          {title}
-        </Typography>
-        <div className={classes.border} />
-        {content ? (
-          <Typography
-            align="center"
-            variant="subtitle1"
-            className={classes.content}
-          >
-            {content}
-          </Typography>
-        ) : null}
-      </Container>
-    );
-  }
-
-  return <Container className={classes.container}>{content || ""}</Container>;
-};
-
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(4),
@@ -78,4 +41,42 @@ const useStyles = makeStyles((theme) => ({
     width: "15rem",
   },
 }));
+
+interface Props {
+  title?: string;
+  content?: string;
+  mainTitle?: boolean;
+}
+
+const DividerWithText: React.FC<Props> = (props: Props) => {
+  const classes = useStyles(props);
+  const { title, content, mainTitle } = props;
+
+  if (mainTitle) {
+    return (
+      <Container className={classes.container}>
+        <Typography
+          align="center"
+          variant="h2"
+          className={classes.contentTitle}
+        >
+          {title}
+        </Typography>
+        <div className={classes.border} />
+        {content ? (
+          <Typography
+            align="center"
+            variant="subtitle1"
+            className={classes.content}
+          >
+            {content}
+          </Typography>
+        ) : null}
+      </Container>
+    );
+  }
+
+  return <Container className={classes.container}>{content || ""}</Container>;
+};
+
 export default DividerWithText;
