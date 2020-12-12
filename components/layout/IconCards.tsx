@@ -1,3 +1,4 @@
+import { icon } from "@fortawesome/fontawesome-svg-core";
 import {
   Card,
   CardContent,
@@ -41,7 +42,7 @@ const IconCards: React.FC = () => {
             <Grid className={classes.gridItem} item xs={3} key={iconInfo.id}>
               <Card className={classes.iconCard}>
                 <CardContent className={classes.cardContent}>
-                  <img src={iconInfo.icon} className={classes.icon} />
+                  <img alt={iconInfo.title} src={iconInfo.icon} className={classes.icon} />
                   <Typography
                     variant="subtitle1"
                     gutterBottom
@@ -73,7 +74,7 @@ const IconCards: React.FC = () => {
       </Container>
     </React.Fragment>
   );
-}
+};
 
 const useStyles = makeStyles((theme) => ({
   grid: {

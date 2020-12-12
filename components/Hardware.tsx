@@ -22,7 +22,7 @@ function Hardware() {
                 </Grid>
                 <Grid item md={6} xs={12}>
                     <Box>
-                        <img className={classes.img} src="https://www.amanngirrbach.com/management/files/products/images/700/product.jpg" />
+                        <img alt="Imprimante 3D Next Dent" className={classes.img} src="static/img/product.jpg" />
                     </Box>
                 </Grid>
             </Grid>

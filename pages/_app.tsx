@@ -26,10 +26,17 @@ export default class MyApp extends App {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
+          <meta name="description" content="
+          Oraltec est un laboratoire de prothèse dentaire spécialisé
+          en prothése adjointe. Situé dans la ville de Saint Aubin-du-Cormier
+          
+          " />
           <link
             href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
             rel="stylesheet"
           />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />

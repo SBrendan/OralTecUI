@@ -184,7 +184,7 @@ const Services: React.FC = () => {
                     title={service.title}
                   />
                   <CardContent className={classes.cardContent}>
-                    <img src={service.icon} className={classes.icon} />
+                    <img alt="Icon de dents" src={service.icon} className={classes.icon} />
                     <Typography gutterBottom variant='subtitle1' className={classes.serviceName}>
                       {service.title}
                     </Typography>
