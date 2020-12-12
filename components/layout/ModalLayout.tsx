@@ -5,6 +5,22 @@ import Carousel, { CarouselProps } from "react-material-ui-carousel";
 import CarouselLayout from "./CarouselLayout";
 import DividerWithText from "./DividerLayout";
 
+const useStyles = makeStyles((theme) => ({
+  container: {
+    flexGrow: 1,
+    display: "block",
+    marginBottom: theme.spacing(5),
+  },
+  img: {
+    objectFit: "contain",
+    width: "100%",
+  },
+  content: {
+    fontFamily: "Roboto, sans-serif",
+    color: theme.palette.secondary.main,
+  },
+}));
+
 interface Props {
   serviceDetails: Service;
 }
@@ -74,21 +90,5 @@ const ModalLayout: React.FC<Props> = (props: Props) => {
     </React.Fragment>
   );
 };
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    flexGrow: 1,
-    display: "block",
-    marginBottom: theme.spacing(5),
-  },
-  img: {
-    objectFit: "contain",
-    width: "100%",
-  },
-  content: {
-    fontFamily: "Roboto, sans-serif",
-    color: theme.palette.secondary.main,
-  },
-}));
 
 export default ModalLayout;

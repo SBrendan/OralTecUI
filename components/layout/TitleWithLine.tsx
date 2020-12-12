@@ -1,28 +1,6 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
-interface Props {
-  title?: string;
-  titleWithLine: string;
-}
-
-const TitleWithLine: React.FC<Props> = (props: Props) => {
-  const { title } = props;
-
-  const classes = useStyles(props);
-
-  if (title) {
-    return (
-      <>
-        <Typography className={classes.title}>{title}</Typography>
-        <hr className={classes.hr} />
-      </>
-    );
-  }
-
-  return <hr className={classes.hr} />;
-};
-
 const useStyles = makeStyles({
   title: {
     fontWeight: "bold",
@@ -58,5 +36,27 @@ const useStyles = makeStyles({
     },
   }),
 });
+
+interface Props {
+  title?: string;
+  titleWithLine: string;
+}
+
+const TitleWithLine: React.FC<Props> = (props: Props) => {
+  const { title } = props;
+
+  const classes = useStyles(props);
+
+  if (title) {
+    return (
+      <>
+        <Typography className={classes.title}>{title}</Typography>
+        <hr className={classes.hr} />
+      </>
+    );
+  }
+
+  return <hr className={classes.hr} />;
+};
 
 export default TitleWithLine;

@@ -1,6 +1,22 @@
 import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
+const useStyles = makeStyles(theme => ({
+    container: {
+        flexGrow: 1,
+        display: "block",
+        marginBottom: theme.spacing(5),
+    },
+    img: {
+        objectFit: "contain",
+        width: "100%",
+    },
+    content: {
+        fontFamily: "Roboto, sans-serif",
+        color: theme.palette.secondary.main,
+    }
+}));
+
 const WhoWeAre: React.FC = () => {
     const classes = useStyles();
     return (
@@ -8,7 +24,7 @@ const WhoWeAre: React.FC = () => {
             <Grid container direction="row" spacing={10}>
                 <Grid item md={6} xs={12}>
                     <Box>
-                        <img className={classes.img} src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"/>
+                        <img alt="Image d'ilustration de prothèse" className={classes.img} src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"/>
                     </Box>
                 </Grid>
                 <Grid item md={6} xs={12}>
@@ -27,21 +43,5 @@ const WhoWeAre: React.FC = () => {
         </Container>
     );
 };
-
-const useStyles = makeStyles(theme => ({
-    container: {
-        flexGrow: 1,
-        display: "block",
-        marginBottom: theme.spacing(5),
-    },
-    img: {
-        objectFit: "contain",
-        width: "100%",
-    },
-    content: {
-        fontFamily: "Roboto, sans-serif",
-        color: theme.palette.secondary.main,
-    }
-}));
 
 export default WhoWeAre

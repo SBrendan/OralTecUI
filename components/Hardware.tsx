@@ -2,7 +2,23 @@ import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core"
 import React from "react";
 import TitleWithLine from "./layout/TitleWithLine";
 
-function Hardware() {
+const useStyles = makeStyles(theme => ({
+    container: {
+        flexGrow: 1,
+        display: "block",
+        marginBottom: theme.spacing(5),
+    },
+    img: {
+        objectFit: "contain",
+        width: "100%",
+    },
+    content: {
+        fontFamily: "Roboto, sans-serif",
+        color: theme.palette.secondary.main,
+    }
+}));
+
+const Hardware: React.FC = () => {
     const classes = useStyles();
     return (
         <Container className={classes.container}>
@@ -22,28 +38,12 @@ function Hardware() {
                 </Grid>
                 <Grid item md={6} xs={12}>
                     <Box>
-                        <img className={classes.img} src="https://www.amanngirrbach.com/management/files/products/images/700/product.jpg" />
+                        <img alt="Imprimante 3D Next Dent" className={classes.img} src="static/img/product.jpg" />
                     </Box>
                 </Grid>
             </Grid>
         </Container>
     );
 };
-
-const useStyles = makeStyles(theme => ({
-    container: {
-        flexGrow: 1,
-        display: "block",
-        marginBottom: theme.spacing(5),
-    },
-    img: {
-        objectFit: "contain",
-        width: "100%",
-    },
-    content: {
-        fontFamily: "Roboto, sans-serif",
-        color: theme.palette.secondary.main,
-    }
-}));
 
 export default Hardware

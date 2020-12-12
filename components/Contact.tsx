@@ -1,9 +1,33 @@
 import { faAt, faClock, faMap, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import dynamic from 'next/dynamic';
 import { Container, Grid, List, ListItem, ListItemIcon, ListItemText, makeStyles } from "@material-ui/core";
 import React from "react";
 import Map from "./layout/MapLayout";
+
+const useStyles = makeStyles(theme => ({
+    container: {
+        flexGrow: 1,
+        display: "block",
+        marginBottom: theme.spacing(5),
+    },
+    img: {
+        objectFit: "contain",
+        width: "100%",
+    },
+    content: {
+        paddingTop: "1em",
+        paddingBottom: "1em"
+    },
+    primary: {
+        color: "#DB8024",
+        textTransform: "uppercase",
+        fontFamily: "Montserrat",
+        fontWeight: "bold"
+    },
+    secondary: {
+        color: theme.palette.secondary.main,
+    }
+}));
 
 const Contact: React.FC = () => {
     const classes = useStyles();
@@ -38,30 +62,5 @@ const Contact: React.FC = () => {
         </Container>
     );
 };
-
-const useStyles = makeStyles(theme => ({
-    container: {
-        flexGrow: 1,
-        display: "block",
-        marginBottom: theme.spacing(5),
-    },
-    img: {
-        objectFit: "contain",
-        width: "100%",
-    },
-    content: {
-        paddingTop: "1em",
-        paddingBottom: "1em"
-    },
-    primary: {
-        color: "#DB8024",
-        textTransform: "uppercase",
-        fontFamily: "Montserrat",
-        fontWeight: "bold"
-    },
-    secondary: {
-        color: theme.palette.secondary.main,
-    }
-}));
 
 export default Contact

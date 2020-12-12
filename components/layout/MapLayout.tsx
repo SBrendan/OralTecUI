@@ -4,6 +4,13 @@ import { makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 
+const useStyles = makeStyles((theme) => ({
+  content: {
+    fontFamily: "Roboto, sans-serif",
+    color: theme.palette.secondary.main,
+  },
+}));
+
 interface States {
   width: string;
   height: string;
@@ -45,12 +52,5 @@ const Map: React.FC = () => {
     </ReactMapGL>
   );
 };
-
-const useStyles = makeStyles((theme) => ({
-  content: {
-    fontFamily: "Roboto, sans-serif",
-    color: theme.palette.secondary.main,
-  },
-}));
 
 export default Map;

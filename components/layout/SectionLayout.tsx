@@ -1,6 +1,14 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, Theme } from "@material-ui/core";
 import React from "react";
 import DividerWithText from "./DividerLayout";
+
+const useStyles = makeStyles((theme: Theme) => ({
+  section: (props: Props): any => ({
+    backgroundColor: props.backgroundColor,
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(7),
+  }),
+}));
 
 interface Props {
   sections: React.ReactFragment;
@@ -27,13 +35,5 @@ const SectionLayout: React.FC<Props> = (props: Props) => {
     </section>
   );
 };
-
-const useStyles = makeStyles((theme) => ({
-  section: (props: Props) => ({
-    backgroundColor: props.backgroundColor,
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(7),
-  }),
-}));
 
 export default SectionLayout;

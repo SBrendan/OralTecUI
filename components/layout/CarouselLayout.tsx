@@ -1,17 +1,7 @@
 import React from "react";
 import { CardMedia, makeStyles } from "@material-ui/core";
 
-interface Props {
-  item: string;
-}
-
-const CarouselLayout: React.FC<Props> = (props: Props) => {
-  const { item } = props;
-  const classes = useStyles();
-  return <CardMedia image={item} className={classes.project} />;
-};
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   project: {
     position: "relative",
     height: "55vh",
@@ -23,5 +13,15 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
 }));
+
+interface Props {
+  item: string;
+}
+
+const CarouselLayout: React.FC<Props> = (props: Props) => {
+  const { item } = props;
+  const classes = useStyles();
+  return <CardMedia image={item} className={classes.project} />;
+};
 
 export default CarouselLayout;

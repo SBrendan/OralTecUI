@@ -59,6 +59,33 @@ const peoples = [
     },
 ];
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        marginBottom: theme.spacing(2),
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+    },
+    grid: {
+        marginTop: theme.spacing(2),
+    },
+    name: {
+        fontSize: 16,
+        fontWeight: "bold",
+        marginTop: "0.5em",
+        textTransform: "uppercase",
+        color: theme.palette.secondary.main
+    },
+    avatar: {
+        width: theme.spacing(15),
+        height: theme.spacing(15),
+        margin: "auto"
+    },
+    jobsCategory: {
+        color: "#242626"
+    }
+}));
+
 const Team: React.FC = () =>{
     const classes = useStyles();
 
@@ -89,32 +116,5 @@ const Team: React.FC = () =>{
         </React.Fragment>
     );
 }
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        marginBottom: theme.spacing(2),
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-    },
-    grid: {
-        marginTop: theme.spacing(2),
-    },
-    name: {
-        fontSize: 16,
-        fontWeight: "bold",
-        marginTop: "0.5em",
-        textTransform: "uppercase",
-        color: theme.palette.secondary.main
-    },
-    avatar: {
-        width: theme.spacing(15),
-        height: theme.spacing(15),
-        margin: "auto"
-    },
-    jobsCategory: {
-        color: "#242626"
-    }
-}));
 
 export default Team;
