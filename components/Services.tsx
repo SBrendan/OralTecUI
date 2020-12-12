@@ -18,17 +18,14 @@ import React from "react";
 Modal.setAppElement('#service');
 const services = [
   {
-    servicePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
+    servicePicture: "static/img/barre-ilu.jpg",
     title: "Barre implanto-portée",
     id: 1,
     icon: "/static/img/toothcircle.png",
     imagesUrls: [
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
+      "static/img/barre-ilu.jpg",
+      "static/img/barre-slider/1.jpg",
+      "static/img/barre-slider/2.jpg",
     ],
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   },
@@ -78,17 +75,14 @@ const services = [
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   },
   {
-    servicePicture: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
+    servicePicture: "static/img/chassis-ilu.jpg",
     title: "Chassis métallique",
     id: 5,
     icon: "/static/img/toothcircle.png",
     imagesUrls: [
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
+      "static/img/chassis-slider/1.jpg",
+      "static/img/chassis-slider/2.jpg",
+      "static/img/chassis-slider/3.jpg",
     ],
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   },
@@ -145,94 +139,94 @@ const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   esse cillum dolore eu fugiat nulla pariatur.`;
 
 
-  const useStyles = makeStyles((theme) => ({
-    serviceCard: {
-      boxShadow: "none",
-      height: "95%",
+const useStyles = makeStyles((theme) => ({
+  serviceCard: {
+    boxShadow: "none",
+    height: "95%",
+    textAlign: "center",
+  },
+  cardGlobalContent: {
+    height: "80%",
+    textAlign: "center",
+  },
+  media: {
+    height: "170px",
+  },
+  icon: {
+    width: "55%",
+    marginTop: "-50px",
+  },
+  cardContent: {
+    background: theme.palette.primary.main,
+    height: "100%",
+    padding: "0px 20px"
+  },
+  serviceName: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginTop: "0.5em",
+    textTransform: "uppercase",
+    color: theme.palette.secondary.main
+  },
+  cardActions: {
+    background: theme.palette.primary.main,
+    textAlign: "center",
+    justifyContent: "center",
+    paddingTop: "10px",
+  },
+  link: {
+    fontFamily: "Roboto, sans-serif",
+    color: "#db8024",
+    textDecoration: "underline",
+    textTransform: "lowercase",
+    fontSize: "1.2em",
+  },
+  content: {
+    fontFamily: "Roboto, sans-serif",
+    color: theme.palette.secondary.main,
+    padding: "20px",
+    [theme.breakpoints.up("sm")]: {
       textAlign: "center",
     },
-    cardGlobalContent: {
-      height: "80%",
-      textAlign: "center",
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "left",
     },
-    media: {
-      height: "170px",
+  },
+  modal: {
+    position: "absolute",
+    [theme.breakpoints.up("md")]: {
+      top: "80px",
+      left: "120px",
+      right: "120px",
+      bottom: "80px",
     },
-    icon: {
-      width: "55%",
-      marginTop: "-50px",
+    [theme.breakpoints.down("sm")]: {
+      top: "90px",
+      left: "40px",
+      right: "40px",
+      bottom: "90px",
     },
-    cardContent: {
-      background: theme.palette.primary.main,
-      height: "100%",
-      padding: "0px 20px"
-    },
-    serviceName: {
-      fontSize: 16,
-      fontWeight: "bold",
-      marginTop: "0.5em",
-      textTransform: "uppercase",
-      color: theme.palette.secondary.main
-    },
-    cardActions: {
-      background: theme.palette.primary.main,
-      textAlign: "center",
-      justifyContent: "center",
-      paddingTop: "10px",
-    },
-    link: {
-      fontFamily: "Roboto, sans-serif",
-      color: "#db8024",
-      textDecoration: "underline",
-      textTransform: "lowercase",
-      fontSize: "1.2em",
-    },
-    content: {
-      fontFamily: "Roboto, sans-serif",
-      color: theme.palette.secondary.main,
-      padding: "20px",
-      [theme.breakpoints.up("sm")]: {
-      textAlign: "center",
-      },
-      [theme.breakpoints.down("xs")]: {
-        textAlign: "left",
-      },
-    },
-    modal: {
-      position: "absolute",
-      [theme.breakpoints.up("md")]: {
-        top: "80px",
-        left: "120px",
-        right: "120px",
-        bottom: "80px",
-      },
-      [theme.breakpoints.down("sm")]: {
-        top: "90px",
-        left: "40px",
-        right: "40px",
-        bottom: "90px",
-      },
-      border: "1px solid rgb(204, 204, 204)",
-      background: "rgb(255, 255, 255)",
-      overflow: "auto",
-      borderRadius: "4px",
-      outline: "none",
-      padding: "20px",
-    },
-    overlay: {
-      position: "fixed",
-      top: "0",
-      left: "0",
-      right: "0",
-      bottom: "0",
-      backgroundColor: "rgba(0,0,0,0.40)"
-    },
-    closesIcon: {
-      "&:hover": {
-        cursor: "pointer"
-      }
+    border: "1px solid rgb(204, 204, 204)",
+    background: "rgb(255, 255, 255)",
+    overflow: "auto",
+    borderRadius: "4px",
+    outline: "none",
+    padding: "20px",
+  },
+  overlay: {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    right: "0",
+    bottom: "0",
+    backgroundColor: "rgba(0,0,0,0.40)"
+  },
+  closesIcon: {
+    "&:hover": {
+      cursor: "pointer"
     }
-  }));
+  }
+}));
 
 const Services: React.FC = () => {
   const classes = useStyles();
@@ -285,7 +279,7 @@ const Services: React.FC = () => {
                   </Button>
                 </CardActions>
               </Card>
-             </Grid>
+            </Grid>
           );
         })}
         <Modal
