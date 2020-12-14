@@ -35,11 +35,6 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "5px solid #db8024",
     width: "15rem",
   },
-  border2: {
-    paddingTop: theme.spacing(3),
-    borderBottom: "5px solid red",
-    width: "15rem",
-  },
 }));
 
 interface Props {

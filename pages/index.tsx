@@ -10,6 +10,7 @@ import "fontsource-roboto";
 import Hardware from "../components/Hardware";
 import Contact from "../components/Contact";
 import IconCards from "../components/layout/IconCards";
+import Footer from "../components/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -61,6 +62,7 @@ const Home: React.FC = () => {
         id="contact"
         mainTitle
       />
+      <Footer />
     </React.Fragment>
   );
 };
